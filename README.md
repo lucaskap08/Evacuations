@@ -1,8 +1,6 @@
 # Kaplan Evacuation‑Order Research &nbsp;|&nbsp; *Employment Pipeline*
 
-This repository contains a set of Python scripts that clean, merge, and visualize data for the employment portion of Kaplan’s evacuation‑order research.
-
----
+This repository contains a set of Python scripts that clean, merge, and visualize data for the employment portion of Kaplan’s evacuation‑order research. In order to execute, you will need to download from https://drive.google.com/drive/folders/17ajLkkDuYjIg0PHZb-UGVL_9RFlNfPUk?usp=drive_link cb_2018_us_county_500k.zip which contains shapefiles for county boundaries, tracs_1980.csv, a large file which contains all hurricane tracks since 1980, and sheldus.csv, which is proprietary data and therefore not available publicly. 
 
 ## Script Overview
 
