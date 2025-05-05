@@ -45,15 +45,14 @@ hurricane_gdf = gpd.GeoDataFrame(
     crs="EPSG:4326"
 )
 
-# Load US counties shapefile and filter for southern states
-counties_path = "cb_2018_us_county_500k.shp"
-counties_gdf = gpd.read_file(counties_path).to_crs("EPSG:4326")
-# Define southern states FIPS codes:
-# Alabama ("01"), Florida ("12"), Georgia ("13"), Louisiana ("22"),
-# Mississippi ("28"), North Carolina ("37"), South Carolina ("45")
+zip_path = "cb_2018_us_county_500k.zip"
+
+# 1️⃣  When the archive contains only ONE shapefile in its root
+counties_gdf = gpd.read_file(f"zip://{zip_path}").to_crs("EPSG:4326")
+
+# …continue with your filter
 southern_states = ["01", "12", "13", "22", "28", "37", "45", "48"]
 southern_counties = counties_gdf[counties_gdf["STATEFP"].isin(southern_states)]
-print(southern_counties)
 
 # -------------------------------------------------------------------
 # 2. CREATE A 50-MILE BUFFER AROUND THE SOUTHERN STATES (IN A PROJECTED CRS)

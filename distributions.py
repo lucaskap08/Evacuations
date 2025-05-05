@@ -53,7 +53,7 @@ ax.plot(xs, kde1(xs), color='darkblue', linewidth=2)
 ax.plot(xs, kde0(xs), color='orange', linewidth=2)
 
 # Add title and labels
-ax.set_title('')
+ax.set_title('Cat 2+ Storms')
 ax.set_xlabel('Property Damage Per Capita (log scale)')
 ax.set_ylabel('Density')
 ax.legend()
@@ -109,7 +109,7 @@ ax.plot(xs, kde1(xs), color='darkblue', linewidth=2)
 ax.plot(xs, kde0(xs), color='orange', linewidth=2)
 
 # Add title and labels
-ax.set_title('')
+ax.set_title('Cat 4 and 5 Storms')
 ax.set_xlabel('Property Damage Per Capita (log scale)')
 ax.set_ylabel('Density')
 ax.legend()

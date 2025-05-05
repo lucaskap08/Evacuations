@@ -10,7 +10,7 @@ This repository contains a set of Python scripts that clean, merge, and visualiz
 | **`merge.py`** | • Merges:<br>&nbsp;&nbsp;– `south_wdate_new.csv` (from previous step)<br>&nbsp;&nbsp;– **`HEvOD_2014-2022.csv`** (evacuation orders)<br>&nbsp;&nbsp;– **`employment_new.csv`**<br>• Cleans dates and builds a **two‑year panel** (pre/post) for each storm‑county.<br>• **Outputs:** `data_clean.csv`. |
 | **`sheldus.py`** | • Loads **`sheldus.csv`** (property damage & fatalities).<br>• Creates:<br>&nbsp;&nbsp;1. `ful_shelly.csv` – **long** (county‑month) panel.<br>&nbsp;&nbsp;2. `ful_shel.csv` – **event‑level** (county‑storm) aggregation. |
 | **`distributions.py`** | • Uses `ful_shel.csv` to plot property‑damage distributions:<br>&nbsp;&nbsp;– All storms **Category ≥ 2**.<br>&nbsp;&nbsp;– Separately for **Category 4 & 5**. |
-| **`southeast_plot.py`** | • Visualizes counts of **high wind speed (>103 mph)** at the county level.<br>• Generates additional exploratory wind‑metric maps. |
+| **`southeast_plot.py`** | • Visualizes counts of **high wind speed (>103 mph)** at the county level.<br>• Generates additional exploratory wind‑metric maps. (Some of the code in this file is redundant with 'southeast_wind.py', but I preferred the inefficiency to having to go back and do some troubleshooting and rewriting for now)|
 | **`evac_plots.py`** | • Plots county‑level counts of evacuation orders.<br>• Reads **`southern_counties.csv`**, `HEvOD_2014-2022.csv`, and the county shapefile. |
 | **`event_study.py`** | • Produces the employment **event‑study figure**.<br>• Requires `ful_shelly.csv` (from `sheldus.py`). |
 | **`unemployment.py`** *(optional)* | • Builds `employment_new.csv` from raw unemployment data.<br>• **⚠️ Slow – not needed if `employment_new.csv` already exists.** |
@@ -19,9 +19,9 @@ This repository contains a set of Python scripts that clean, merge, and visualiz
 
 ##  Execution Order
 
-1. `southeast_wind.py`
-2. `merge.py`
-3. `sheldus.py`
+1. `southeast_wind.py` 
+2. `merge.py` 
+3. `sheldus.py` 
 4. `distributions.py`
 5. `southeast_plot.py`
 6. `evac_plots.py`
